@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def load_and_prepare_data(csv_file='Parkinsson disease.csv'):
+def load_and_prepare_data(csv_file=r'dataset\augmented_dataset.csv'):
     """
     Load the CSV file and prepare data for RFE
     """
@@ -246,7 +246,7 @@ def main():
     print("=" * 60)
     
     # Load data
-    X, y, feature_names, df = load_and_prepare_data('Parkinsson disease.csv')
+    X, y, feature_names, df = load_and_prepare_data(r'dataset\augmented_dataset.csv')
     
     if X is None:
         return
